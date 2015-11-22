@@ -8,6 +8,10 @@
 # "UCI HAR Dataset".
 #  >> The directory where the data sets are stored is "UCI HAR Dataset" within the working directory.
 #  >> The downloaded zip file is Dataset.zip.
+
+# Process starts
+cat("Please wait...")
+
 # Set the data directory name
 wdir <- "UCI HAR Dataset"
 
@@ -132,4 +136,6 @@ averageData <- averageData[order(averageData$subject, averageData$activity),]
 # Output the tidy data set
 write.table(averageData, "tidyAverage.txt", row.name=FALSE)
 
+# Process ends
+cat(" run_analysis Completed! --> output to file 'tidyAverage.txt'")
 #### END OF SCRIPT run_analysis.R#################################################################
